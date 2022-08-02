@@ -14,6 +14,12 @@
 		EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57292898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld */; };
 		EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFC572C2898B37600EF13F4 /* Assets.xcassets */; };
 		EEFC57302898B37600EF13F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFC572E2898B37600EF13F4 /* LaunchScreen.storyboard */; };
+		EEFC573A2899774800EF13F4 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC57392899774800EF13F4 /* ActivityTableViewCell.xib */; };
+		EEFC573E2899776000EF13F4 /* PackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC573D2899776000EF13F4 /* PackageTableViewCell.xib */; };
+		EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC573F2899779E00EF13F4 /* ActivityTableViewCell.swift */; };
+		EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */; };
+		EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */; };
+		EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		EEFC572C2898B37600EF13F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEFC572F2898B37600EF13F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEFC57312898B37600EF13F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFC57392899774800EF13F4 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		EEFC573D2899776000EF13F4 /* PackageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageTableViewCell.xib; sourceTree = "<group>"; };
+		EEFC573F2899779E00EF13F4 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierTableViewCell.swift; sourceTree = "<group>"; };
+		EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageTableViewCell.swift; sourceTree = "<group>"; };
+		EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrierTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +72,76 @@
 			children = (
 				EEFC57202898B37500EF13F4 /* AppDelegate.swift */,
 				EEFC57222898B37500EF13F4 /* SceneDelegate.swift */,
-				EEFC57242898B37500EF13F4 /* ViewController.swift */,
-				EEFC57262898B37500EF13F4 /* Main.storyboard */,
+				EEFC574D2899874C00EF13F4 /* Model */,
+				EEFC57492899785300EF13F4 /* View */,
+				EEFC574A2899786800EF13F4 /* Controller */,
 				EEFC572C2898B37600EF13F4 /* Assets.xcassets */,
 				EEFC572E2898B37600EF13F4 /* LaunchScreen.storyboard */,
 				EEFC57312898B37600EF13F4 /* Info.plist */,
 				EEFC57292898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld */,
 			);
 			path = "Track it Package Tracker";
+			sourceTree = "<group>";
+		};
+		EEFC5745289977F500EF13F4 /* ActivityTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC573F2899779E00EF13F4 /* ActivityTableViewCell.swift */,
+				EEFC57392899774800EF13F4 /* ActivityTableViewCell.xib */,
+			);
+			path = ActivityTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEFC5746289977F900EF13F4 /* PackageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */,
+				EEFC573D2899776000EF13F4 /* PackageTableViewCell.xib */,
+			);
+			path = PackageTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEFC5747289977FC00EF13F4 /* CarrierTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */,
+				EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */,
+			);
+			path = CarrierTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEFC57482899780300EF13F4 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC5745289977F500EF13F4 /* ActivityTableViewCell */,
+				EEFC5746289977F900EF13F4 /* PackageTableViewCell */,
+				EEFC5747289977FC00EF13F4 /* CarrierTableViewCell */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		EEFC57492899785300EF13F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC57262898B37500EF13F4 /* Main.storyboard */,
+				EEFC57482899780300EF13F4 /* TableView Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEFC574A2899786800EF13F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC57242898B37500EF13F4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EEFC574D2899874C00EF13F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFC573A2899774800EF13F4 /* ActivityTableViewCell.xib in Resources */,
 				EEFC57302898B37600EF13F4 /* LaunchScreen.storyboard in Resources */,
+				EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */,
+				EEFC573E2899776000EF13F4 /* PackageTableViewCell.xib in Resources */,
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
 			);
@@ -141,9 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEFC57252898B37500EF13F4 /* ViewController.swift in Sources */,
+				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
 				EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */,
+				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
