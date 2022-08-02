@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57202898B37500EF13F4 /* AppDelegate.swift */; };
 		EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57222898B37500EF13F4 /* SceneDelegate.swift */; };
-		EEFC57252898B37500EF13F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57242898B37500EF13F4 /* ViewController.swift */; };
+		EEFC57252898B37500EF13F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57242898B37500EF13F4 /* HomeViewController.swift */; };
 		EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFC57262898B37500EF13F4 /* Main.storyboard */; };
 		EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFC57292898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld */; };
 		EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFC572C2898B37600EF13F4 /* Assets.xcassets */; };
@@ -20,13 +20,14 @@
 		EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */; };
 		EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */; };
 		EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */; };
+		EEFC574F289988F200EF13F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC574E289988F200EF13F4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EEFC571D2898B37500EF13F4 /* Track it Package Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Track it Package Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFC57202898B37500EF13F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEFC57222898B37500EF13F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEFC57242898B37500EF13F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEFC57242898B37500EF13F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEFC57272898B37500EF13F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEFC572A2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Track_it_Package_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		EEFC572C2898B37600EF13F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		EEFC5741289977AA00EF13F4 /* CarrierTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierTableViewCell.swift; sourceTree = "<group>"; };
 		EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageTableViewCell.swift; sourceTree = "<group>"; };
 		EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrierTableViewCell.xib; sourceTree = "<group>"; };
+		EEFC574E289988F200EF13F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +125,8 @@
 		EEFC57492899785300EF13F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC57262898B37500EF13F4 /* Main.storyboard */,
 				EEFC57482899780300EF13F4 /* TableView Cells */,
+				EEFC57262898B37500EF13F4 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,7 +134,8 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC57242898B37500EF13F4 /* ViewController.swift */,
+				EEFC574E289988F200EF13F4 /* MainViewController.swift */,
+				EEFC57242898B37500EF13F4 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,11 +223,12 @@
 			files = (
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
-				EEFC57252898B37500EF13F4 /* ViewController.swift in Sources */,
+				EEFC57252898B37500EF13F4 /* HomeViewController.swift in Sources */,
 				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
 				EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
+				EEFC574F289988F200EF13F4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

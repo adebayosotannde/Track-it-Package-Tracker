@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zue-6h-kKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8087" y="-864"/>
+            <point key="canvasLocation" x="7906" y="-844"/>
         </scene>
         <!--Select a Carrier-->
         <scene sceneID="feX-tG-Ebv">
@@ -1053,7 +1053,7 @@
         <!--Home View Controller-->
         <scene sceneID="0i7-JH-JME">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="ihm-NE-MEW" userLabel="Home View Controller" customClass="HomeViewController" customModule="Track_it_Package_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ihm-NE-MEW" userLabel="Home View Controller" customClass="HomeViewController" customModule="Track_it_Package_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="loL-ia-Rqs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1062,26 +1062,26 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vca-5x-iAh">
-                                        <rect key="frame" x="40" y="50" width="334" height="297"/>
+                                        <rect key="frame" x="40" y="50" width="334" height="248"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparantLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-U1-iKG">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="195"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparentLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-U1-iKG">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="146"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Track of all your packages and Shipments." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnh-I9-TTl">
-                                                <rect key="frame" x="0.0" y="205" width="334" height="41"/>
+                                                <rect key="frame" x="0.0" y="156" width="334" height="41"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Tracking your Packages with the + Button. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-Jc-jya">
-                                                <rect key="frame" x="0.0" y="256" width="334" height="41"/>
+                                                <rect key="frame" x="0.0" y="207" width="334" height="41"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-2g-6S6">
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-2g-6S6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableView>
@@ -1165,7 +1165,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHz-xa-l6k" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="tJJ-v5-i7Y"/>
             </objects>
-            <point key="canvasLocation" x="9103" y="-865"/>
+            <point key="canvasLocation" x="8861" y="-844"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="fX6-3X-kkj">
@@ -4206,6 +4206,7 @@ Cg
         <!--Navigation Controller-->
         <scene sceneID="Nb4-8t-aJ4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfc-p0-gzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZl-2M-dZz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ws3-kV-Ghg">
@@ -4217,7 +4218,6 @@ Cg
                         <segue destination="NB6-0E-7Ay" kind="relationship" relationship="rootViewController" id="mQ9-W8-lKD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfc-p0-gzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6960.8695652173919" y="-844.41964285714278"/>
         </scene>
@@ -4248,7 +4248,7 @@ Cg
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="greenTheme">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5690000057220459" green="0.75700002908706665" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
