@@ -57,8 +57,6 @@ extension LoginViewController
 {
     func LoginUser()
     {
-        UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
-        
         if let email = emailTextField.text, let password = passwordTextField.text
         {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -67,7 +65,6 @@ extension LoginViewController
                     print(e)
                     //AlertBox
                     let alert = UIAlertController(title: "Error", message: e.localizedDescription, preferredStyle: UIAlertController.Style.alert)
-                
                     alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler:
                     { UIAlertAction in
                         
@@ -80,8 +77,6 @@ extension LoginViewController
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                     self.navigationController?.pushViewController(newViewController, animated: true)
                 }
-                            
-                
             }
         }
     }
