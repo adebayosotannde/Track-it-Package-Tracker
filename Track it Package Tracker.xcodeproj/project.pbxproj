@@ -21,6 +21,9 @@
 		EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */; };
 		EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */; };
 		EEFC574F289988F200EF13F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC574E289988F200EF13F4 /* MainViewController.swift */; };
+		EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */; };
+		EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */; };
+		EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		EEFC5743289977C900EF13F4 /* PackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageTableViewCell.swift; sourceTree = "<group>"; };
 		EEFC574B28997A0000EF13F4 /* CarrierTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrierTableViewCell.xib; sourceTree = "<group>"; };
 		EEFC574E289988F200EF13F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +140,8 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EEFC574E289988F200EF13F4 /* MainViewController.swift */,
-				EEFC57242898B37500EF13F4 /* HomeViewController.swift */,
+				EEFC5762289AF79300EF13F4 /* Main and Home */,
+				EEFC5761289AF78100EF13F4 /* Authentification */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +151,25 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EEFC5761289AF78100EF13F4 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC575B2899B6E500EF13F4 /* LoginViewController.swift */,
+				EEFC575D289AF76D00EF13F4 /* SignupViewController.swift */,
+				EEFC575F289AF77B00EF13F4 /* ForgetPasswordViewController.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		EEFC5762289AF79300EF13F4 /* Main and Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC574E289988F200EF13F4 /* MainViewController.swift */,
+				EEFC57242898B37500EF13F4 /* HomeViewController.swift */,
+			);
+			path = "Main and Home";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFC5760289AF77B00EF13F4 /* ForgetPasswordViewController.swift in Sources */,
+				EEFC575C2899B6E500EF13F4 /* LoginViewController.swift in Sources */,
 				EEFC5742289977AA00EF13F4 /* CarrierTableViewCell.swift in Sources */,
+				EEFC575E289AF76D00EF13F4 /* SignupViewController.swift in Sources */,
 				EEFC572B2898B37500EF13F4 /* Track_it_Package_Tracker.xcdatamodeld in Sources */,
 				EEFC57252898B37500EF13F4 /* HomeViewController.swift in Sources */,
 				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
