@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ForgetPasswordViewController: UIViewController
+//MARK: - LifeCycle Functions
+extension ForgetPasswordViewController
 {
     override func viewDidLoad()
     {
@@ -18,4 +19,8 @@ class ForgetPasswordViewController: UIViewController
     {
         navigationController?.popViewController(animated: true)
     }
+}
+class ForgetPasswordViewController: UIViewController
+{
+    @IBOutlet weak var emailTextField: UITextField!
 }

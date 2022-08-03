@@ -7,7 +7,8 @@
 
 import UIKit
 
-class SignupViewController: UIViewController
+//MARK: - Life Cycle
+extension SignupViewController
 {
     override func viewDidLoad()
     {
@@ -19,5 +20,9 @@ class SignupViewController: UIViewController
         navigationController?.popViewController(animated: true)
     }
     
-    
+}
+class SignupViewController: UIViewController
+{
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 }
