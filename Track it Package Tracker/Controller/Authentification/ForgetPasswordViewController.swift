@@ -7,17 +7,15 @@
 
 import UIKit
 
-class SignupViewController: UIViewController
+class ForgetPasswordViewController: UIViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-    @IBAction func exitButtonPressedn(_ sender: Any)
+    @IBAction func exitButtonPressed(_ sender: Any)
     {
         navigationController?.popViewController(animated: true)
     }
-    
-    
 }

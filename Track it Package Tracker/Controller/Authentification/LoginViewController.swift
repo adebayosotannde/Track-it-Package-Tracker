@@ -7,20 +7,20 @@
 
 import UIKit
 
-class LoginViewController:UIViewController
+//MARK: - LifeCycle Functions
+extension LoginViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-    
-    override func viewDidAppear(_ animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
-        //Hides the back button
+        //Hides the back button before the view appears.
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
     
     override func viewWillDisappear(_ animated: Bool)
     {
@@ -28,3 +28,11 @@ class LoginViewController:UIViewController
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
+
+
+
+class LoginViewController:UIViewController
+{
+ 
+}
+
