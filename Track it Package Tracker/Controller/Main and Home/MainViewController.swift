@@ -24,11 +24,13 @@ class MainViewController:UIViewController
     func launchNextViewController()
     {
         
-        var userIsLoggedIn = false
+        var userIsLoggedIn = true
         
         if userIsLoggedIn
         {
-            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            self.navigationController?.pushViewController(newViewController, animated: true)
         }
         else
         {
@@ -39,3 +41,5 @@ class MainViewController:UIViewController
 }
     
 }
+
+

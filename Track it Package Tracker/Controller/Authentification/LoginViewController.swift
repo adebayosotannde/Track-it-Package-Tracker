@@ -29,6 +29,7 @@ extension LoginViewController
         //Hides the back button before the view appears.
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+       
     }
     
     override func viewWillDisappear(_ animated: Bool)
@@ -38,12 +39,9 @@ extension LoginViewController
     }
 }
 
-
-
 class LoginViewController:UIViewController
 {
-    var currentNonce:String?
-    
+    var currentNonce:String? //Used for Apple Sign in
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -59,8 +57,6 @@ class LoginViewController:UIViewController
     {
         initiateGoogleSignOn()
     }
-    
-    
 }
 
 //MARK: - Sign up
@@ -164,8 +160,6 @@ extension LoginViewController
                 }
                 
             }
-            
-        
     }
 }
 
@@ -302,3 +296,5 @@ extension LoginViewController: ASAuthorizationControllerDelegate,  ASAuthorizati
         return self.view.window!
     }
 }
+
+
