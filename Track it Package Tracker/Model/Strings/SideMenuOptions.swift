@@ -12,9 +12,12 @@ var options: [option] = [option(title: "Home", segue: "HomeSegue"),
                          option(title: "Settings",segue: "SettingsSegue"),
                          option(title: "Profile",segue: "ProfileSegue"),
                          option(title: "Terms and Conditions",segue: "TermsSegue"),
-                         option(title: "Privacy Policy", segue: "PrivacySegue")]
+                         option(title: "Privacy Policy", segue: "PrivacySegue"),
+                         option(title: "Add", segue: "add")
+]
 
-struct option {
+struct option
+{
     var title = String()
     var segue = String()
 }

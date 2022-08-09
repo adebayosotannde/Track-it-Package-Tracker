@@ -13,12 +13,14 @@ class MainViewController:UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         //Step 1: Decide which View Controller to display next
-       launchNextViewController()
-        
-        
-        
+//       launchNextViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        launchNextViewController()
     }
     
     func launchNextViewController()
@@ -28,9 +30,20 @@ class MainViewController:UIViewController
         
         if userIsLoggedIn
         {
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//            self.navigationController?.pushViewController(newViewController, animated: true)
+//
+            
+            
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeMenuViewController") as! HomeMenuViewController
             self.navigationController?.pushViewController(newViewController, animated: true)
+            
+            
+            
+            
+            
         }
         else
         {
