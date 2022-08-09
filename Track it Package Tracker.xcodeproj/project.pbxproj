@@ -14,6 +14,7 @@
 		EE15DDE5289B366700F83FB2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE4289B366700F83FB2 /* FirebaseFirestoreSwift */; };
 		EE15DDE8289B37E300F83FB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE7289B37E300F83FB2 /* GoogleSignIn */; };
 		EE15DDEA289B37E300F83FB2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE15DDE9289B37E300F83FB2 /* GoogleSignInSwift */; };
+		EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */; };
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
 		EE5829FD289EDE220073FDB7 /* SideHomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */; };
 		EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		EE15DDD9289B222F00F83FB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE15DDED289B41FD00F83FB2 /* Track it Package Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Track it Package Tracker.entitlements"; sourceTree = "<group>"; };
+		EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeMenuViewController.swift; sourceTree = "<group>"; };
 		EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,8 @@
 		EEFC57482899780300EF13F4 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */,
+				EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */,
 				EEFC5745289977F500EF13F4 /* ActivityTableViewCell */,
 				EEFC5746289977F900EF13F4 /* PackageTableViewCell */,
 				EEFC5747289977FC00EF13F4 /* CarrierTableViewCell */,
@@ -202,7 +206,6 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */,
 				EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */,
 				EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */,
 				EEFC5762289AF79300EF13F4 /* Main and Home */,
@@ -319,6 +322,7 @@
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
 				EE15DDDA289B222F00F83FB2 /* GoogleService-Info.plist in Resources */,
+				EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

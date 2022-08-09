@@ -18,6 +18,17 @@ extension HomeMenuViewController
         menuTableView.dataSource = self
         menuTableView.backgroundColor = .clear
         
+        packagesTableView.delegate = self
+        packagesTableView.dataSource = self
+        
+        
+        let menuNib = UINib(nibName: SideMenuTableViewCell.classIdentifier,bundle: nil)
+        self.menuTableView.register(menuNib,forCellReuseIdentifier: SideMenuTableViewCell.cellIdentifier)
+        
+        
+        let packageNib = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
+        self.packagesTableView.register(packageNib,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
+        
         home = self.containerView.transform
     
     }
@@ -31,6 +42,7 @@ class HomeMenuViewController: UIViewController
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
     @IBOutlet var menuTableView: UITableView!
     
+    @IBOutlet weak var packagesTableView: UITableView!
     //Variable used for the Side Menu
     let screen = UIScreen.main.bounds
     var menu = false
@@ -82,6 +94,8 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         {
         case menuTableView:
             return options.count
+        case packagesTableView:
+            return options.count
         default:
             fatalError()
         }
@@ -93,9 +107,12 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         switch tableView
         {
         case menuTableView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! SideMenuTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuTableViewCell.cellIdentifier, for: indexPath) as! SideMenuTableViewCell
             cell.descriptionLabel.text = options[indexPath.row].title
             cell.descriptionLabel.textColor = .black
+            return cell
+        case packagesTableView:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
             return cell
         default:
             fatalError()
@@ -106,9 +123,21 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        switch tableView
+        {
+        case menuTableView:
+            return 45
+        case packagesTableView:
+            return 110
+        default:
+            fatalError()
+        }
+    
+    }
     
 }
-
 
 
 

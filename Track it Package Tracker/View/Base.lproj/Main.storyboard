@@ -4005,34 +4005,6 @@ Cg
                                 <rect key="frame" x="0.0" y="188" width="250" height="674"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.65437761579999998" green="0.83006472310000001" blue="0.51645018890000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableViewCell" id="Q7F-lq-uc2" customClass="SideMenuTableViewCell" customModule="Track_it_Package_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="250" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q7F-lq-uc2" id="MxZ-rw-AAU">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngH-4g-3MM">
-                                                    <rect key="frame" x="15" y="11.999999999999998" width="219" height="20.333333333333329"/>
-                                                    <color key="tintColor" red="0.90497988309999999" green="0.95491536460000004" blue="0.84882032429999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ngH-4g-3MM" secondAttribute="trailing" constant="16" id="LcD-Jf-Rjg"/>
-                                                <constraint firstItem="ngH-4g-3MM" firstAttribute="centerY" secondItem="MxZ-rw-AAU" secondAttribute="centerY" id="gB8-6t-lTg"/>
-                                                <constraint firstItem="ngH-4g-3MM" firstAttribute="leading" secondItem="MxZ-rw-AAU" secondAttribute="leading" constant="15" id="nxB-i8-nk9"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="descriptionLabel" destination="ngH-4g-3MM" id="wn4-JB-x94"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-Wz-vFC" userLabel="Main View">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
@@ -4057,6 +4029,10 @@ Cg
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aja-4T-lWD">
+                                        <rect key="frame" x="0.0" y="96" width="428" height="830"/>
+                                        <color key="backgroundColor" name="DarkGrey"/>
+                                    </tableView>
                                     <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-iJ-kBi">
                                         <rect key="frame" x="184" y="786" width="60" height="60"/>
                                         <color key="backgroundColor" name="greenTheme"/>
@@ -4076,13 +4052,22 @@ Cg
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="xhs-3M-LFs" kind="popoverPresentation" popoverAnchorView="YwM-iJ-kBi" id="944-v4-ni7">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="DarkGrey"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aja-4T-lWD" secondAttribute="bottom" id="4lN-Fb-AbS"/>
                                     <constraint firstItem="qed-hm-j4c" firstAttribute="top" secondItem="Cda-Wz-vFC" secondAttribute="topMargin" constant="50" id="8qx-4F-9UQ"/>
+                                    <constraint firstItem="aja-4T-lWD" firstAttribute="top" secondItem="Cda-Wz-vFC" secondAttribute="topMargin" id="SLC-Z9-J2S"/>
+                                    <constraint firstAttribute="trailing" secondItem="aja-4T-lWD" secondAttribute="trailing" id="bbj-XA-YOK"/>
                                     <constraint firstItem="qed-hm-j4c" firstAttribute="leading" secondItem="Cda-Wz-vFC" secondAttribute="leading" constant="40" id="c9k-QA-fgW"/>
                                     <constraint firstAttribute="bottom" secondItem="YwM-iJ-kBi" secondAttribute="bottom" constant="80" id="dnp-SG-mFd"/>
+                                    <constraint firstItem="aja-4T-lWD" firstAttribute="leading" secondItem="Cda-Wz-vFC" secondAttribute="leading" id="sxm-Cs-p5f"/>
                                     <constraint firstItem="YwM-iJ-kBi" firstAttribute="centerX" secondItem="Cda-Wz-vFC" secondAttribute="centerX" id="vNl-6D-ebu"/>
                                     <constraint firstAttribute="trailing" secondItem="qed-hm-j4c" secondAttribute="trailing" constant="40" id="xpU-Gi-OJk"/>
                                 </constraints>
@@ -4124,6 +4109,7 @@ Cg
                         <outlet property="containerView" destination="Cda-Wz-vFC" id="m4o-LT-61q"/>
                         <outlet property="hamburgerMenuItem" destination="Lvm-s0-5yb" id="oJz-na-jqV"/>
                         <outlet property="menuTableView" destination="0tp-4b-fTs" id="lDW-dm-YM8"/>
+                        <outlet property="packagesTableView" destination="aja-4T-lWD" id="spl-Pz-nio"/>
                         <outlet property="swipeGesture" destination="s1u-ty-o4p" id="ZAW-DD-n8o"/>
                     </connections>
                 </viewController>
@@ -4139,9 +4125,12 @@ Cg
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="10301" y="-333"/>
+            <point key="canvasLocation" x="10300.934579439252" y="-333.0453563714903"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="944-v4-ni7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Alibaba" width="1200" height="729"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
