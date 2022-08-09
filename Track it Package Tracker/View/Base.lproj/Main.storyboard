@@ -954,7 +954,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHz-xa-l6k" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="tJJ-v5-i7Y"/>
             </objects>
-            <point key="canvasLocation" x="8634" y="421"/>
+            <point key="canvasLocation" x="8950" y="-333"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4HE-F5-KWw">
@@ -4061,11 +4061,33 @@ Cg
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-iJ-kBi">
+                                        <rect key="frame" x="184" y="786" width="60" height="60"/>
+                                        <color key="backgroundColor" name="greenTheme"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="FDS-lv-PvU"/>
+                                            <constraint firstAttribute="width" constant="60" id="O5q-09-Nfr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="DarkGrey"/>
                                 <constraints>
                                     <constraint firstItem="qed-hm-j4c" firstAttribute="top" secondItem="Cda-Wz-vFC" secondAttribute="topMargin" constant="50" id="8qx-4F-9UQ"/>
                                     <constraint firstItem="qed-hm-j4c" firstAttribute="leading" secondItem="Cda-Wz-vFC" secondAttribute="leading" constant="40" id="c9k-QA-fgW"/>
+                                    <constraint firstAttribute="bottom" secondItem="YwM-iJ-kBi" secondAttribute="bottom" constant="80" id="dnp-SG-mFd"/>
+                                    <constraint firstItem="YwM-iJ-kBi" firstAttribute="centerX" secondItem="Cda-Wz-vFC" secondAttribute="centerX" id="vNl-6D-ebu"/>
                                     <constraint firstAttribute="trailing" secondItem="qed-hm-j4c" secondAttribute="trailing" constant="40" id="xpU-Gi-OJk"/>
                                 </constraints>
                                 <connections>
@@ -4121,7 +4143,7 @@ Cg
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9269" y="-333"/>
+            <point key="canvasLocation" x="10301" y="-333"/>
         </scene>
     </scenes>
     <resources>
