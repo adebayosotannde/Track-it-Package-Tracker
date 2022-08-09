@@ -4041,8 +4041,33 @@ Cg
                                         <rect key="frame" x="-8" y="394" width="428" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </navigationBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qed-hm-j4c">
+                                        <rect key="frame" x="40" y="146" width="348" height="247.33333333333337"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparentLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7ou-O2-zxx">
+                                                <rect key="frame" x="0.0" y="0.0" width="348" height="146"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Track of all your packages and Shipments." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-8F-Udr">
+                                                <rect key="frame" x="0.0" y="156" width="348" height="40.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Tracking your Packages with the + Button. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpF-Io-uSc">
+                                                <rect key="frame" x="0.0" y="206.66666666666669" width="348" height="40.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="DarkGrey"/>
+                                <constraints>
+                                    <constraint firstItem="qed-hm-j4c" firstAttribute="top" secondItem="Cda-Wz-vFC" secondAttribute="topMargin" constant="50" id="8qx-4F-9UQ"/>
+                                    <constraint firstItem="qed-hm-j4c" firstAttribute="leading" secondItem="Cda-Wz-vFC" secondAttribute="leading" constant="40" id="c9k-QA-fgW"/>
+                                    <constraint firstAttribute="trailing" secondItem="qed-hm-j4c" secondAttribute="trailing" constant="40" id="xpU-Gi-OJk"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="s1u-ty-o4p" appends="YES" id="vdI-HT-q0g"/>
                                     <outletCollection property="gestureRecognizers" destination="8is-sE-ZfJ" appends="YES" id="uDY-C6-auU"/>
@@ -4068,6 +4093,9 @@ Cg
                         <barButtonItem key="leftBarButtonItem" id="Lvm-s0-5yb">
                             <imageReference key="image" image="line.3.horizontal" catalog="system" symbolScale="large"/>
                             <color key="tintColor" name="greenTheme"/>
+                            <connections>
+                                <action selector="showHamburgerMenu:" destination="5gd-95-7uu" id="GNJ-1y-QfM"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Sa0-RR-2dG">
                             <imageReference key="image" image="camera.circle.fill" catalog="system" symbolScale="large"/>
@@ -4076,6 +4104,7 @@ Cg
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="Cda-Wz-vFC" id="m4o-LT-61q"/>
+                        <outlet property="hamburgerMenuItem" destination="Lvm-s0-5yb" id="oJz-na-jqV"/>
                         <outlet property="menuTableView" destination="0tp-4b-fTs" id="lDW-dm-YM8"/>
                         <outlet property="swipeGesture" destination="s1u-ty-o4p" id="ZAW-DD-n8o"/>
                     </connections>
@@ -4092,7 +4121,7 @@ Cg
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9110.7476635514013" y="-341.46868250539961"/>
+            <point key="canvasLocation" x="9269" y="-333"/>
         </scene>
     </scenes>
     <resources>

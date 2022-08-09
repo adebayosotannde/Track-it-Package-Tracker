@@ -37,7 +37,15 @@ class HomeMenuViewController: UIViewController
     var home = CGAffineTransform()
     
     
-  
+
+    @IBOutlet weak var hamburgerMenuItem: UIBarButtonItem!
+    
+    @IBAction func showHamburgerMenu(_ sender: UIBarButtonItem)
+    {
+       
+        showMenu()
+       
+    }
     
     @IBAction func showMenu(_ sender: UISwipeGestureRecognizer) {
         
@@ -47,13 +55,7 @@ class HomeMenuViewController: UIViewController
         print(menu)
         if menu == false && swipeGesture.direction == .right
         {
-            
-            print("user is showing menu")
-            
-            showMenu()
-            
-            menu = true
-            
+        showMenu()
         }
         
     }
@@ -64,13 +66,7 @@ class HomeMenuViewController: UIViewController
         
         if menu == true
         {
-            
-            print("user is hiding menu")
-            
-            hideMenu()
-            
-            menu = false
-            
+        hideMenu()
         }
         
         
@@ -102,10 +98,10 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 extension HomeMenuViewController
 {
     
-    func showMenu() {
-        
+    func showMenu()
+    {
         self.containerView.layer.cornerRadius = 40
-        
+
         let x = screen.width * 0.8
         let originalTransform = self.containerView.transform
         let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
@@ -115,9 +111,16 @@ extension HomeMenuViewController
                 
             })
         
+        menu = true
+        
+        //DIABLES THE HAMBURGERMENU
+        hamburgerMenuItem.isEnabled = false
+        
+        
     }
     
-    func hideMenu() {
+    func hideMenu()
+    {
         
             UIView.animate(withDuration: 0.7, animations:
                             {
@@ -127,6 +130,10 @@ extension HomeMenuViewController
               
                 
             })
+        
+        menu = false
+        //RE-ENABLES THE HAMBURGERMENU
+        hamburgerMenuItem.isEnabled = true
         
     }
     
