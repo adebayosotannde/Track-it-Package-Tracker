@@ -4037,10 +4037,6 @@ Cg
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-Wz-vFC" userLabel="Main View">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5p-2u-CGy">
-                                        <rect key="frame" x="-8" y="394" width="428" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </navigationBar>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qed-hm-j4c">
                                         <rect key="frame" x="40" y="146" width="348" height="247.33333333333337"/>
                                         <subviews>

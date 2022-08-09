@@ -78,15 +78,32 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return options.count
+        switch tableView
+        {
+        case menuTableView:
+            return options.count
+        default:
+            fatalError()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! SideMenuTableViewCell
-        cell.descriptionLabel.text = options[indexPath.row].title
-        cell.descriptionLabel.textColor = .black
-        return cell
+        
+        switch tableView
+        {
+        case menuTableView:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! SideMenuTableViewCell
+            cell.descriptionLabel.text = options[indexPath.row].title
+            cell.descriptionLabel.textColor = .black
+            return cell
+        default:
+            fatalError()
+        }
+        
+        
+        
+        
     }
     
     
