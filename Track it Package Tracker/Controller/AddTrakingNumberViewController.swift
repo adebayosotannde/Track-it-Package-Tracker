@@ -101,8 +101,13 @@ extension AddTrakingNumberViewController: UITextFieldDelegate
 //        navigationController?.pushViewController(newViewController, animated: true)
 //           return false
         print("You touched me!")
-        performSegue(withIdentifier: "mySegueID", sender: nil)
-        return false
+//        performSegue(withIdentifier: "mySegueID", sender: nil)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
+               navigationController?.pushViewController(newViewController, animated: true)
+                  return false
+      
 
        }
 }

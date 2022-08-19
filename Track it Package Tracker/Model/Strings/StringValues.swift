@@ -44,4 +44,9 @@ struct StringLiteral
     static let addParcel = "addParcel"
     static let barcodeScanner = "barcodeScanner"
     
+    
+    
+    //SupportEmail
+    static let emailSupportAddress = "trackit.packagetracker@gmail.com"
+    static let emailMessage = "<p>Thank you for your support&nbsp;</p><p>Please provide the following details so we can work promptly in adding the carrier</p><p><strong>Carrier Name:</strong></p><p><strong>Sample Tracking Number: </strong></p><p><strong>Carrier Website:</strong></p><p><br></p><p>Thanks you once again. As always all information provided are kept confidential.</p><p><br></p><p>Best Regards,&nbsp;</p><p>Track it! Team.</p>"
 }

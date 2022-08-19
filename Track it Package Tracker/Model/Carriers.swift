@@ -1,17 +1,15 @@
 //
 //  Carriers.swift
-//  Track it Package Tracker
+//  Track It
 //
-//  Created by Adebayo Sotannde on 8/19/22.
+//  Created by Adebayo Sotannde on 1/17/22.
 //
 
 import Foundation
 
-
 struct Carrier: Decodable
 {
     let name: String
-    let carrierCode: String
 
     //let category: Category
 
@@ -23,3 +21,25 @@ struct Carrier: Decodable
 //      case other
 //    }
 }
+
+
+extension Carrier
+{
+  static func supportedSarriers() -> [Carrier]
+  {
+    guard
+      let url = Bundle.main.url(forResource: "carriers", withExtension: "json"),
+      let data = try? Data(contentsOf: url)
+      else {
+        return []
+    }
+
+    do {
+      let decoder = JSONDecoder()
+      return try decoder.decode([Carrier].self, from: data)
+    } catch {
+      return []
+    }
+  }
+}
+

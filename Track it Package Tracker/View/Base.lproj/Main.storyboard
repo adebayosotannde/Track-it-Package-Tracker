@@ -10,45 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select a Carrier-->
-        <scene sceneID="feX-tG-Ebv">
-            <objects>
-                <viewController storyboardIdentifier="SelectCarrierViewController" id="Os8-k2-SNk" customClass="SelectCarrierViewController" customModule="Track_it_Package_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RvT-D0-XuU">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-Ka-x38">
-                                <rect key="frame" x="0.0" y="88" width="428" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn9-D7-VpK">
-                                <rect key="frame" x="0.0" y="862" width="428" height="64"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Cant Find Carrier? Click Here"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="q4g-mr-8U1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bzN-Ka-x38" firstAttribute="leading" secondItem="q4g-mr-8U1" secondAttribute="leading" id="2rA-2P-tZi"/>
-                            <constraint firstAttribute="bottom" secondItem="xn9-D7-VpK" secondAttribute="bottom" id="6pt-S8-lP1"/>
-                            <constraint firstItem="q4g-mr-8U1" firstAttribute="trailing" secondItem="bzN-Ka-x38" secondAttribute="trailing" id="FIg-xN-vG0"/>
-                            <constraint firstItem="bzN-Ka-x38" firstAttribute="bottom" secondItem="q4g-mr-8U1" secondAttribute="bottom" constant="-30" id="Isd-Dd-k3d"/>
-                            <constraint firstItem="xn9-D7-VpK" firstAttribute="leading" secondItem="RvT-D0-XuU" secondAttribute="leading" id="TiB-S1-5G9"/>
-                            <constraint firstItem="xn9-D7-VpK" firstAttribute="top" secondItem="bzN-Ka-x38" secondAttribute="bottom" id="XCU-gD-gX5"/>
-                            <constraint firstItem="bzN-Ka-x38" firstAttribute="top" secondItem="q4g-mr-8U1" secondAttribute="top" id="eNO-nz-pE9"/>
-                            <constraint firstAttribute="trailing" secondItem="xn9-D7-VpK" secondAttribute="trailing" id="iWh-gr-Mmy"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Select a Carrier" id="A5q-TJ-yQQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hEL-dZ-BHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7841" y="1685"/>
-        </scene>
         <!--1ZT74T080331190585-->
         <scene sceneID="BFI-Xv-u4g">
             <objects>
@@ -572,7 +533,6 @@
                         <outlet property="packageDescriptionLabel" destination="2QF-0x-PUA" id="5SO-fu-c7C"/>
                         <outlet property="startTrackingButton" destination="hdh-hI-16Y" id="xpr-AZ-YqH"/>
                         <outlet property="trackingNumberLabel" destination="Tc2-vC-VcA" id="V6n-Wk-1bi"/>
-                        <segue destination="Os8-k2-SNk" kind="show" identifier="mySegueID" id="L3i-wv-iyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1J-u2-Ghk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3946,6 +3906,57 @@ Cg
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="7183" y="-97"/>
+        </scene>
+        <!--Select a Carrier-->
+        <scene sceneID="ypn-uQ-jil">
+            <objects>
+                <viewController storyboardIdentifier="SelectCarrierViewController" id="0P9-5O-5cM" customClass="SelectCarrierViewController" customModule="Track_It" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzB-cK-KAl">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-c2-JKQ">
+                                <rect key="frame" x="0.0" y="44" width="428" height="882"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0P9-5O-5cM" id="n3H-FR-25c"/>
+                                    <outlet property="delegate" destination="0P9-5O-5cM" id="SD2-Ac-jqZ"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQF-XJ-hgl">
+                                <rect key="frame" x="0.0" y="876" width="428" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YWl-Lg-pGA"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cant Find Carrier? Click Here"/>
+                                <connections>
+                                    <action selector="cantFindCarrierButtonPressed:" destination="0P9-5O-5cM" eventType="touchUpInside" id="PW9-pM-eGC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2De-oS-tQi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gQF-XJ-hgl" secondAttribute="bottom" id="2PC-Ql-2FB"/>
+                            <constraint firstItem="T4q-c2-JKQ" firstAttribute="leading" secondItem="2De-oS-tQi" secondAttribute="leading" id="4DU-eO-MMQ"/>
+                            <constraint firstItem="T4q-c2-JKQ" firstAttribute="top" secondItem="2De-oS-tQi" secondAttribute="top" id="LAh-DU-avI"/>
+                            <constraint firstItem="2De-oS-tQi" firstAttribute="trailing" secondItem="T4q-c2-JKQ" secondAttribute="trailing" id="Npx-1h-TKn"/>
+                            <constraint firstItem="gQF-XJ-hgl" firstAttribute="leading" secondItem="wzB-cK-KAl" secondAttribute="leading" id="iPB-fa-NN9"/>
+                            <constraint firstAttribute="bottom" secondItem="T4q-c2-JKQ" secondAttribute="bottom" id="rhf-lk-cn9"/>
+                            <constraint firstAttribute="trailing" secondItem="gQF-XJ-hgl" secondAttribute="trailing" id="xc8-Zp-0iL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select a Carrier" id="t79-dO-TYE"/>
+                    <connections>
+                        <outlet property="carrierTableView" destination="T4q-c2-JKQ" id="06k-yY-g7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgN-mK-z6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7841" y="1606"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

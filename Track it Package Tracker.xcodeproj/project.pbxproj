@@ -19,7 +19,9 @@
 		EE5829FD289EDE220073FDB7 /* SideHomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */; };
 		EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */; };
 		EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767528B01ABC00CA9FA0 /* Carriers.swift */; };
-		EEAF767828B01E4800CA9FA0 /* carriers.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.strings */; };
+		EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.json */; };
+		EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */; };
+		EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */; };
 		EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* PackageViewController.swift */; };
 		EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */; };
 		EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */; };
@@ -54,7 +56,9 @@
 		EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeMenuViewController.swift; sourceTree = "<group>"; };
 		EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		EEAF767528B01ABC00CA9FA0 /* Carriers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carriers.swift; sourceTree = "<group>"; };
-		EEAF767728B01E4800CA9FA0 /* carriers.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = carriers.strings; sourceTree = "<group>"; };
+		EEAF767728B01E4800CA9FA0 /* carriers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carriers.json; sourceTree = "<group>"; };
+		EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarrierViewController.swift; sourceTree = "<group>"; };
+		EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageStatus.swift; sourceTree = "<group>"; };
 		EEC9FA8928A5F706009D6848 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
 		EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrakingNumberViewController.swift; sourceTree = "<group>"; };
 		EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewContoller.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		EEFC574A2899786800EF13F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EEAF767928B01F6F00CA9FA0 /* SelectCarrierViewController.swift */,
 				EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */,
 				EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */,
 				EEFC5762289AF79300EF13F4 /* Main and Home */,
@@ -232,7 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				EEAF767528B01ABC00CA9FA0 /* Carriers.swift */,
-				EEAF767728B01E4800CA9FA0 /* carriers.strings */,
+				EEAF767B28B024EF00CA9FA0 /* PackageStatus.swift */,
+				EEAF767728B01E4800CA9FA0 /* carriers.json */,
 				EEE4B2E6289B615300650185 /* Extensions and AppUtility */,
 				EEE4B2E3289B612F00650185 /* Strings */,
 			);
@@ -337,7 +343,7 @@
 				EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */,
 				EEFC573E2899776000EF13F4 /* PackageTableViewCell.xib in Resources */,
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
-				EEAF767828B01E4800CA9FA0 /* carriers.strings in Resources */,
+				EEAF767828B01E4800CA9FA0 /* carriers.json in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
 				EE15DDDA289B222F00F83FB2 /* GoogleService-Info.plist in Resources */,
 				EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */,
@@ -369,9 +375,11 @@
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
+				EEAF767A28B01F6F00CA9FA0 /* SelectCarrierViewController.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
 				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* SideHomeMenuViewController.swift in Sources */,
+				EEAF767C28B024EF00CA9FA0 /* PackageStatus.swift in Sources */,
 				EEFC574F289988F200EF13F4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
