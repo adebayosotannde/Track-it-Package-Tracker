@@ -22,9 +22,9 @@ class PackageTableViewCell: UITableViewCell
     {
         super.awakeFromNib()
         //Autp Adjust All fonts for diffrent screen sizes
-        packageDescription.adjustsFontSizeToFitWidth = true
-        carrierNameAndTracking.adjustsFontSizeToFitWidth = true
-        packageCurrentDescription.adjustsFontSizeToFitWidth = true
+//        packageDescription.adjustsFontSizeToFitWidth = true
+//        carrierNameAndTracking.adjustsFontSizeToFitWidth = true
+//        packageCurrentDescription.adjustsFontSizeToFitWidth = true
     }
 
     

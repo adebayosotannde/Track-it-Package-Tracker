@@ -18,6 +18,9 @@
 		EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */; };
 		EE5829FD289EDE220073FDB7 /* SideHomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */; };
 		EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */; };
+		EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF767528B01ABC00CA9FA0 /* Carriers.swift */; };
+		EEAF767828B01E4800CA9FA0 /* carriers.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEAF767728B01E4800CA9FA0 /* carriers.strings */; };
+		EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC9FA8928A5F706009D6848 /* PackageViewController.swift */; };
 		EEE4B2DE289B601500650185 /* AddTrakingNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */; };
 		EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */; };
 		EEE4B2E2289B611E00650185 /* StringValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4B2E1289B611E00650185 /* StringValues.swift */; };
@@ -50,6 +53,9 @@
 		EE5829FA289EDCA30073FDB7 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeMenuViewController.swift; sourceTree = "<group>"; };
 		EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		EEAF767528B01ABC00CA9FA0 /* Carriers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carriers.swift; sourceTree = "<group>"; };
+		EEAF767728B01E4800CA9FA0 /* carriers.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = carriers.strings; sourceTree = "<group>"; };
+		EEC9FA8928A5F706009D6848 /* PackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewController.swift; sourceTree = "<group>"; };
 		EEE4B2DD289B601500650185 /* AddTrakingNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrakingNumberViewController.swift; sourceTree = "<group>"; };
 		EEE4B2DF289B60E200650185 /* BarcodeScannerViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewContoller.swift; sourceTree = "<group>"; };
 		EEE4B2E1289B611E00650185 /* StringValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValues.swift; sourceTree = "<group>"; };
@@ -100,6 +106,15 @@
 				EE5829FC289EDE220073FDB7 /* SideHomeMenuViewController.swift */,
 			);
 			path = "Home Alternatives";
+			sourceTree = "<group>";
+		};
+		EEB2B19128A6C3B700EBFF5C /* SideMenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */,
+				EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */,
+			);
+			path = SideMenuTableViewCell;
 			sourceTree = "<group>";
 		};
 		EEE4B2E3289B612F00650185 /* Strings */ = {
@@ -185,8 +200,7 @@
 		EEFC57482899780300EF13F4 /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EE7DDB7628A21941002E239A /* SideMenuTableViewCell.swift */,
-				EE55F8B328A2C76600661A74 /* SideMenuTableViewCell.xib */,
+				EEB2B19128A6C3B700EBFF5C /* SideMenuTableViewCell */,
 				EEFC5745289977F500EF13F4 /* ActivityTableViewCell */,
 				EEFC5746289977F900EF13F4 /* PackageTableViewCell */,
 				EEFC5747289977FC00EF13F4 /* CarrierTableViewCell */,
@@ -217,6 +231,8 @@
 		EEFC574D2899874C00EF13F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEAF767528B01ABC00CA9FA0 /* Carriers.swift */,
+				EEAF767728B01E4800CA9FA0 /* carriers.strings */,
 				EEE4B2E6289B615300650185 /* Extensions and AppUtility */,
 				EEE4B2E3289B612F00650185 /* Strings */,
 			);
@@ -236,6 +252,7 @@
 		EEFC5762289AF79300EF13F4 /* Main and Home */ = {
 			isa = PBXGroup;
 			children = (
+				EEC9FA8928A5F706009D6848 /* PackageViewController.swift */,
 				EEFC574E289988F200EF13F4 /* MainViewController.swift */,
 				EEFC57242898B37500EF13F4 /* HomeViewController.swift */,
 				EE84F309289F108900FCDBF8 /* Home Alternatives */,
@@ -320,6 +337,7 @@
 				EEFC574C28997A0000EF13F4 /* CarrierTableViewCell.xib in Resources */,
 				EEFC573E2899776000EF13F4 /* PackageTableViewCell.xib in Resources */,
 				EEFC572D2898B37600EF13F4 /* Assets.xcassets in Resources */,
+				EEAF767828B01E4800CA9FA0 /* carriers.strings in Resources */,
 				EEFC57282898B37500EF13F4 /* Main.storyboard in Resources */,
 				EE15DDDA289B222F00F83FB2 /* GoogleService-Info.plist in Resources */,
 				EE55F8B428A2C76600661A74 /* SideMenuTableViewCell.xib in Resources */,
@@ -345,12 +363,14 @@
 				EEFC57252898B37500EF13F4 /* HomeViewController.swift in Sources */,
 				EE5829FB289EDCA30073FDB7 /* SideMenuOptions.swift in Sources */,
 				EEFC57402899779E00EF13F4 /* ActivityTableViewCell.swift in Sources */,
+				EEAF767628B01ABC00CA9FA0 /* Carriers.swift in Sources */,
 				EEFC57212898B37500EF13F4 /* AppDelegate.swift in Sources */,
 				EEE4B2EA289B86E300650185 /* Extension UIViewController.swift in Sources */,
 				EEFC5744289977C900EF13F4 /* PackageTableViewCell.swift in Sources */,
 				EE7DDB7728A21941002E239A /* SideMenuTableViewCell.swift in Sources */,
 				EEE4B2E0289B60E200650185 /* BarcodeScannerViewContoller.swift in Sources */,
 				EEFC57232898B37500EF13F4 /* SceneDelegate.swift in Sources */,
+				EEC9FA8A28A5F706009D6848 /* PackageViewController.swift in Sources */,
 				EE5829FD289EDE220073FDB7 /* SideHomeMenuViewController.swift in Sources */,
 				EEFC574F289988F200EF13F4 /* MainViewController.swift in Sources */,
 			);

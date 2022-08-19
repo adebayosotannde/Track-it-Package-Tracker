@@ -12,16 +12,32 @@ extension AddTrakingNumberViewController
 {
     override func viewDidLoad()
     {
-        
+
         registerNotificationCenter()
         barcodeButton.blink()
+        self.carrierNameLabel.delegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+
+        if (launchBarcodeViewController == true)
+        {
+            self.performSegue(withIdentifier: StringLiteral.barcodeScanner, sender: self)
+            launchBarcodeViewController = false
+        }
     }
 }
 
 class AddTrakingNumberViewController: UIViewController
 {
+
+    var launchBarcodeViewController = false
+
+
     //IBOUTLETS
-   
+
     @IBOutlet weak var startTrackingButton: UIButton!
     @IBOutlet weak var carrierImage: UIImageView!
     //UITextFileds
@@ -29,7 +45,7 @@ class AddTrakingNumberViewController: UIViewController
     @IBOutlet weak var carrierNameLabel: UITextField!
     @IBOutlet weak var packageDescriptionLabel: UITextField!
     @IBOutlet weak var trackingNumberLabel: UITextField!
-    
+
     @IBAction func startTrackingButtonPressed(_ sender: Any)
     {
     }
@@ -47,7 +63,7 @@ extension AddTrakingNumberViewController
     //Obsereves the Notification
     NotificationCenter.default.addObserver(self, selector: #selector(doWhenNotified(_:)), name: Notification.Name(StringLiteral.notificationKey), object: nil)
     }
-    
+
     func postBarcodeNotification(code: String)
     {
         print("Im Here2")
@@ -58,7 +74,7 @@ extension AddTrakingNumberViewController
 
     @objc func doWhenNotified(_ notiofication: NSNotification)
     {
-        
+
         print("Im Here")
       if let dict = notiofication.userInfo as NSDictionary?
       {
@@ -74,3 +90,22 @@ extension AddTrakingNumberViewController
       }
     }
 }
+
+extension AddTrakingNumberViewController: UITextFieldDelegate
+{
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    {
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SelectCarrierViewController") as! SelectCarrierViewController
+//        navigationController?.pushViewController(newViewController, animated: true)
+//           return false
+        print("You touched me!")
+        performSegue(withIdentifier: "mySegueID", sender: nil)
+        return false
+
+       }
+}
+
+
+

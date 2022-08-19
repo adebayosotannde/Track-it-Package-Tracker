@@ -13,27 +13,32 @@ extension HomeMenuViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+     
+       
         
-        menuTableView.delegate = self
-        menuTableView.dataSource = self
+      
         menuTableView.backgroundColor = .clear
+      
+       
         
-        packagesTableView.delegate = self
-        packagesTableView.dataSource = self
+      
         
         
         let menuNib = UINib(nibName: SideMenuTableViewCell.classIdentifier,bundle: nil)
         self.menuTableView.register(menuNib,forCellReuseIdentifier: SideMenuTableViewCell.cellIdentifier)
         
         
-        let packageNib = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
-        self.packagesTableView.register(packageNib,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
+        //RegisterTableViewCells
+        let textFieldCell = UINib(nibName: PackageTableViewCell.classIdentifier,bundle: nil)
+        self.packagesTableView.register(textFieldCell,forCellReuseIdentifier: PackageTableViewCell.cellIdentifier)
+        
+        
         
         home = self.containerView.transform
     
     }
+    
 }
-
 
 
 class HomeMenuViewController: UIViewController
@@ -58,6 +63,16 @@ class HomeMenuViewController: UIViewController
         showMenu()
        
     }
+    
+    @IBAction func cameraButtonPressed(_ sender: Any)
+    {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addBarcodeViewController = storyBoard.instantiateViewController(withIdentifier: "AddTrakingNumberViewController") as! AddTrakingNumberViewController
+        addBarcodeViewController.modalPresentationStyle = .currentContext
+        addBarcodeViewController.launchBarcodeViewController = true
+        navigationController?.pushViewController(addBarcodeViewController, animated: true)
+    }
+    
     
     @IBAction func showMenu(_ sender: UISwipeGestureRecognizer) {
         
@@ -84,7 +99,6 @@ class HomeMenuViewController: UIViewController
         
     }
 }
-
 
 extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
 {
@@ -113,10 +127,14 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         case packagesTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: PackageTableViewCell.cellIdentifier, for: indexPath) as! PackageTableViewCell
+            cell.selectionStyle = .none
             return cell
         default:
             fatalError()
         }
+        
+       
+
         
         
         
@@ -137,6 +155,30 @@ extension HomeMenuViewController: UITableViewDelegate, UITableViewDataSource
     
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        switch tableView
+        {
+        case menuTableView:
+            print("Menu Table View Tapped")
+        case packagesTableView:
+            print("Package Table View Tapped")
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let packageView = storyBoard.instantiateViewController(withIdentifier: "PackageViewController") as! PackageViewController
+            navigationController?.pushViewController(packageView, animated: true)
+            
+        default:
+            fatalError()
+        }
+        
+        
+    }
+   
+    
+    
+    
 }
 
 
@@ -148,16 +190,18 @@ extension HomeMenuViewController
     {
         self.containerView.layer.cornerRadius = 40
 
-        let x = screen.width * 0.8
+        let x = screen.width * 0.5
         let originalTransform = self.containerView.transform
         let scaledTransform = originalTransform.scaledBy(x: 0.8, y: 0.8)
             let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
-            UIView.animate(withDuration: 0.7, animations: {
+            UIView.animate(withDuration: 0.7, animations:
+                            {
                 self.containerView.transform = scaledAndTranslatedTransform
                 
             })
         
         menu = true
+        
         
         //DIABLES THE HAMBURGERMENU
         hamburgerMenuItem.isEnabled = false
